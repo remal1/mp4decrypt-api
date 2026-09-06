@@ -51,8 +51,8 @@ Designed following the battle-tested architectural patterns of [`shaka-decryptor
 import { Mp4DecryptSession, Mp4LogLevel } from "./sdk/bun/mp4decrypt_sdk";
 
 // Paradigm 1: In-Memory Buffer Decryption
-const kid = "9eb4050de44b4802932e27d75083e266";
-const key = "166634c675823c235a4a9446fad52e4d";
+const kid = "11111111111111111111111111111111";
+const key = "22222222222222222222222222222222";
 const encryptedBytes = new Uint8Array(...);
 
 // One-shot
@@ -72,8 +72,8 @@ session.destroy();
 ```python
 from sdk.python.mp4decrypt_sdk import Mp4DecryptSession, Mp4LogLevel
 
-kid = "9eb4050de44b4802932e27d75083e266"
-key = "166634c675823c235a4a9446fad52e4d"
+kid = "11111111111111111111111111111111"
+key = "22222222222222222222222222222222"
 
 # One-shot RAM buffer decryption
 decrypted_bytes = Mp4DecryptSession.decrypt_buffer(encrypted_bytes, kid, key)
