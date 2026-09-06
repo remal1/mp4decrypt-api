@@ -29,17 +29,17 @@ Designed following the battle-tested architectural patterns of [`shaka-decryptor
 
 ## Architectural Comparison
 
-| Capability | Official Bento4 CLI (`mp4decrypt`) | Rust Wrapper (`rsmp4decrypt`) | `mp4decrypt-api` (This Project) |
-| :--- | :---: | :---: | :---: |
-| **Execution Model** | Subprocess CLI (`std::process`) | Subprocess / C FFI Wrapper | **Native In-Process C ABI Dynamic Library** |
-| **File I/O** | Yes | Yes | **Yes** |
-| **In-Memory Buffer I/O** | No (requires temp files) | Limited | **Yes (zero disk access)** |
-| **Custom Stream Callbacks** | No | No | **Yes (`read`/`write`/`seek`/`tell`/`size`)** |
-| **In-Process Thread Safety** | N/A (separate processes) | Process-based | **Full In-Process (Isolated Atom Factories)** |
-| **Log Callbacks** | Stderr only | Stderr only | **Native C callback with filter levels** |
-| **Progress Interception** | Terminal progress text | No | **Synchronous step/total callback** |
-| **Asynchronous Cancellation** | Process SIGINT | SIGINT | **Thread-safe `cancel()` method** |
-| **Container Inspection** | Separate `mp4dump`/`mp4info` CLI | No | **Built-in `probe()` API** |
+| Capability | Official Bento4 CLI (`mp4decrypt`) | `mp4decrypt-api` (This Project) |
+| :--- | :---: | :---: |
+| **Execution Model** | Subprocess CLI (`std::process`) | **Native In-Process C ABI Dynamic Library** |
+| **File I/O** | Yes | **Yes** |
+| **In-Memory Buffer I/O** | No (requires temp files) | **Yes (zero disk access)** |
+| **Custom Stream Callbacks** | No | **Yes (`read`/`write`/`seek`/`tell`/`size`)** |
+| **In-Process Thread Safety** | N/A (separate processes) | **Full In-Process (Isolated Atom Factories)** |
+| **Log Callbacks** | Stderr only | **Native C callback with filter levels** |
+| **Progress Interception** | Terminal progress text | **Synchronous step/total callback** |
+| **Asynchronous Cancellation** | Process SIGINT | **Thread-safe `cancel()` method** |
+| **Container Inspection** | Separate `mp4dump`/`mp4info` CLI | **Built-in `probe()` API** |
 
 ---
 
