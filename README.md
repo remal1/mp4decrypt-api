@@ -8,7 +8,7 @@
 
 A high-performance, **100% in-process thread-safe** C ABI dynamic library and native SDKs (Bun & Python) for Axiomatic Systems' **Bento4 MP4 Decryptor** (`mp4decrypt`).
 
-Designed following the battle-tested architectural patterns of [`shaka-decryptor`](https://github.com/Ata/shaka-decryptor) and [`mkvtoolnix-api`](https://github.com/Ata/mkvtoolnix-api), `mp4decrypt-api` eliminates the subprocess overhead of spawning CLI executables while enabling direct RAM buffer manipulation, custom streaming callbacks, progress notifications, and dynamic log routing.
+Designed following the battle-tested architectural patterns of [`shaka-decryptor`](https://github.com/remal1/shaka-decryptor) and [`mkvtoolnix-api`](https://github.com/remal1/mkvtoolnix-api), `mp4decrypt-api` eliminates the subprocess overhead of spawning CLI executables while enabling direct RAM buffer manipulation, custom streaming callbacks, progress notifications, and dynamic log routing.
 
 ---
 
@@ -147,7 +147,7 @@ for track in info.tracks:
 
 ```bash
 # Clone with Bento4 submodule
-git clone --recurse-submodules https://github.com/your-username/mp4decrypt-api.git
+git clone --recurse-submodules https://github.com/remal1/mp4decrypt-api.git
 cd mp4decrypt-api
 
 # Configure and compile Release build
