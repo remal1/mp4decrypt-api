@@ -21,6 +21,7 @@
     "demo:python:async": "python examples/python/demo_async.py"
   },
   "devDependencies": {
-    "@types/bun": "^1.4.0"
+    "@types/bun": "^1.4.1",
+    "@types/node": "^26.4.1"
   }
 }

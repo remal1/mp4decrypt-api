@@ -367,7 +367,7 @@ export class Mp4DecryptSession {
           { args: [FFIType.ptr, FFIType.ptr, FFIType.u64], returns: FFIType.i64 }
         );
         activeCallbacks.push(readCb);
-        struct.writeBigUInt64LE(BigInt(readCb.ptr), 8);
+        struct.writeBigUInt64LE(BigInt(readCb.ptr!), 8);
       }
 
       if (cb.write) {
@@ -379,7 +379,7 @@ export class Mp4DecryptSession {
           { args: [FFIType.ptr, FFIType.ptr, FFIType.u64], returns: FFIType.i64 }
         );
         activeCallbacks.push(writeCb);
-        struct.writeBigUInt64LE(BigInt(writeCb.ptr), 16);
+        struct.writeBigUInt64LE(BigInt(writeCb.ptr!), 16);
       }
 
       if (cb.seek) {
@@ -390,7 +390,7 @@ export class Mp4DecryptSession {
           { args: [FFIType.ptr, FFIType.u64], returns: FFIType.i64 }
         );
         activeCallbacks.push(seekCb);
-        struct.writeBigUInt64LE(BigInt(seekCb.ptr), 24);
+        struct.writeBigUInt64LE(BigInt(seekCb.ptr!), 24);
       }
 
       if (cb.tell) {
@@ -401,7 +401,7 @@ export class Mp4DecryptSession {
           { args: [FFIType.ptr], returns: FFIType.i64 }
         );
         activeCallbacks.push(tellCb);
-        struct.writeBigUInt64LE(BigInt(tellCb.ptr), 32);
+        struct.writeBigUInt64LE(BigInt(tellCb.ptr!), 32);
       }
 
       if (cb.size) {
@@ -412,7 +412,7 @@ export class Mp4DecryptSession {
           { args: [FFIType.ptr], returns: FFIType.u64 }
         );
         activeCallbacks.push(sizeCb);
-        struct.writeBigUInt64LE(BigInt(sizeCb.ptr), 40);
+        struct.writeBigUInt64LE(BigInt(sizeCb.ptr!), 40);
       }
 
       return struct;
