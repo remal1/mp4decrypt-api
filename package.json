@@ -1,0 +1,26 @@
+{
+  "name": "mp4decrypt-api",
+  "version": "1.0.0",
+  "description": "High-performance, thread-safe C ABI and Bun/Python SDK for Bento4 mp4decrypt",
+  "main": "sdk/bun/mp4decrypt_sdk.ts",
+  "types": "sdk/bun/mp4decrypt_sdk.ts",
+  "scripts": {
+    "demo:bun:file": "bun examples/bun/demo_file_decrypt.ts",
+    "demo:bun:buffer": "bun examples/bun/demo_buffer_decrypt.ts",
+    "demo:bun:streaming": "bun examples/bun/demo_streaming.ts",
+    "demo:bun:probe": "bun examples/bun/demo_probe.ts",
+    "demo:bun:log": "bun examples/bun/demo_log_callback.ts",
+    "demo:bun:cancel": "bun examples/bun/demo_cancellation.ts",
+    "demo:bun:parallel": "bun examples/bun/demo_parallel.ts",
+    "demo:python:file": "python examples/python/demo_file_decrypt.py",
+    "demo:python:buffer": "python examples/python/demo_buffer_decrypt.py",
+    "demo:python:streaming": "python examples/python/demo_streaming.py",
+    "demo:python:probe": "python examples/python/demo_probe.py",
+    "demo:python:log": "python examples/python/demo_log_callback.py",
+    "demo:python:cancel": "python examples/python/demo_cancellation.py",
+    "demo:python:async": "python examples/python/demo_async.py"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.0"
+  }
+}

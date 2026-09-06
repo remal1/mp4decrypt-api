@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mp4decrypt-sdk"
+version = "1.0.0"
+description = "Python SDK for Bento4 mp4decrypt C ABI with high performance and thread safety"
+readme = "README.md"
+authors = [{ name = "mp4decrypt Contributors" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/remal1/mp4decrypt-api"

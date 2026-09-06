@@ -1,0 +1,46 @@
+# Build directories
+build/
+build-*/
+out/
+bin/
+*.dir/
+
+# CMake artifacts
+CMakeUserPresets.json
+CMakeCache.txt
+CMakeFiles/
+
+# Node / Bun
+node_modules/
+bun.lock*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+dist/
+
+# Compiled Binaries and Symbols
+*.dll
+*.so
+*.dylib
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.obj
+*.o
+
+# IDEs
+.vscode/
+.vs/
+.idea/
+
+# Test output artifacts
+output_*.mp4
+decrypted_*.mp4
+test_out_*.mp4
+*.tmp

@@ -1,0 +1,47 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "x64-release",
+      "displayName": "x64 Release",
+      "description": "Visual Studio 2026 MSVC Release build",
+      "generator": "Visual Studio 18 2026",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_APPS": "OFF",
+        "BUILD_SHARED_LIBRARY": "OFF",
+        "MSVC_FORCE_STATIC_C_RUNTIME": "ON"
+      }
+    },
+    {
+      "name": "x64-debug",
+      "displayName": "x64 Debug",
+      "description": "Visual Studio 2026 MSVC Debug build",
+      "generator": "Visual Studio 18 2026",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BUILD_APPS": "OFF",
+        "BUILD_SHARED_LIBRARY": "OFF",
+        "MSVC_FORCE_STATIC_C_RUNTIME": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "x64-release",
+      "configurePreset": "x64-release",
+      "configuration": "Release",
+      "targets": ["mp4decrypt_api"]
+    },
+    {
+      "name": "x64-debug",
+      "configurePreset": "x64-debug",
+      "configuration": "Debug",
+      "targets": ["mp4decrypt_api"]
+    }
+  ]
+}
